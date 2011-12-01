@@ -41,7 +41,7 @@ public final class IStack<E> {
 
 	public Object top () {
 		if (isEmpty()) throw new IllegalStateException("IStack.top");
-		return elements[(size-1)];
+		return elements.get(size-1);//TODO check for off by one
 	}
 	
 	public boolean isEmpty()
