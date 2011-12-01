@@ -21,10 +21,10 @@ public final class IStack<E> {
 		size = 0;
 	}
 	
-	private IStack(Object[] e, int s)
+	private IStack(LinkedList e, int s)//TODO consider this
 		{	this.elements = e;		this.size = s;	}
 
-	public IStack push (Object e) {
+	public IStack push (E e) {
 		Object[] newElements = new Object[size+1];
 		System.arraycopy(elements, 0, newElements, 0, size);
 		newElements[size] = e;
