@@ -28,7 +28,7 @@ public final class IStack<E> {
 		LinkedList<E> newElements = new LinkedList<E>();
 		newElements.addAll(elements);
 		newElements.add(e);
-		return new IStack(newElements, size+1);
+		return new IStack<E>(newElements, size+1);
 	}
 
 	public IStack pop () {
@@ -36,7 +36,7 @@ public final class IStack<E> {
 		LinkedList<E> newElements = new LinkedList<E>();
 		newElements.addAll(elements);
 		newElements.remove(size);//TODO make sure this is not off by one
-		return new IStack(newElements, size-1);
+		return new IStack<E>(newElements, size-1);
 	}
 
 	public Object top () {
