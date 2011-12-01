@@ -25,9 +25,9 @@ public final class IStack<E> {
 		{	this.elements = e;		this.size = s;	}
 
 	public IStack push (E e) {
-		Object[] newElements = new Object[size+1];
-		System.arraycopy(elements, 0, newElements, 0, size);
-		newElements[size] = e;
+		LinkedList<E> newElements = new LinkedList<E>();
+		newElements.addAll(elements);
+		newElements.add(e);
 		return new IStack(newElements, size+1);
 	}
 
