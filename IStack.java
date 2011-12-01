@@ -5,15 +5,19 @@
 	//TODO Describe what I did. 
 */
 
-import java.util.*;
+//import java.util.*;
+import java.util.LinkedList;
 
-public final class IStack {
 
-	private final Object[] elements;
+public final class IStack<E> {
+
+	//private final Object[] elements;//TODO replace this with a list
+	private final LinkedList<E> elements;
 	private final int size;
 
 	public IStack() {
-		this.elements = new Object[0];
+		this.elements = new LinkedList<E>();
+//		this.elements = new Object[0];
 		size = 0;
 	}
 	
