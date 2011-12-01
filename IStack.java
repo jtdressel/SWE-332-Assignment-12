@@ -47,41 +47,5 @@ public final class IStack<E> {
 	public boolean isEmpty()
 		{	return size == 0;	}
 	
-	@Override public boolean equals(Object o) {
-		if (o == this)					return true;
-		if (!(o instanceof IStack))		return false;
-		IStack s = (IStack) o;
-		if (s.size != this.size)		return false;
-		for (int i=0; i<size; i++)
-		{
-			if (!s.elements[i].equals(this.elements[i]))
-				return false;
-		}
-		return true;
-	}
-	
-	@Override public int hashCode() {
-		Integer iSize = new Integer(size);
-		int result = 17 + iSize.hashCode();
-		for (int i=0; i<size; i++)
-			{	result = 31 * result * elements[i].hashCode();	}
-		return result;
-	}
-	
-	@Override public String toString()
-	{
-		String str = "[";
-		if (!isEmpty())	{
-			for (int i=0; i<size; i++)	{
-				if (elements[i] == null)
-				{	str += "null";	}
-				else
-				{	str += elements[i].toString();	}
-				if ( (i+1) != size)
-				{	str += ", ";	}
-			}
-		}
-		str += "]";
-		return str;
-	}
+
 }
