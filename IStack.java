@@ -64,7 +64,7 @@ public final class IStack<E> {
 		Integer iSize = new Integer(size);
 		int result = 17 + iSize.hashCode();
 		for (int i=0; i<size; i++)
-			{	result = 31 * result * elements[i].hashCode();	}
+			{	result = 31 * result * elements.get(i).hashCode();	}
 		return result;
 	}
 	
