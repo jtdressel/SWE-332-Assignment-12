@@ -1,0 +1,29 @@
+SWE 332 Assignment 12
+Due Thursday, December 1, 2011
+
+Goal: Generics.
+
+Consider the sample solution IStack I provided on Blackboard for homework 7.
+
+Your assignment is to make this abstraction generic. In addition to the existing API, you should add a producer version of Bloch's method pushAll() method (the correct one on page 135).
+
+You should find item 26 in Bloch, in which Bloch generifies a mutable Stack, an excellent overall guide.
+
+Get rid of the Object [] array in the implementation. You can either replace it with a List or with something more efficient (for example, see the FlyStack solution).
+
+Suppress all warnings that you cannot eliminate.
+
+Summarize exactly what you did in a short report.
+
+
+
+Bonus 1: Start with the FlyStack class instead of the IStack class. Otherwise, follow the same directions, where applicable. The static factory method is the tricky part here. (1 point.)
+
+Bonus 2: In addition to Bonus 1, make the FlyStack class threadsafe. (1 point.)
+
+Grading Criteria:
+
+    Generics
+    Replacement of the Object[] array.
+    API provides all required methods.
+    Report describing what you did. 
