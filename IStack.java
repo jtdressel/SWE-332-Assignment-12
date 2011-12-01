@@ -33,8 +33,9 @@ public final class IStack<E> {
 
 	public IStack pop () {
 		if (isEmpty()) throw new IllegalStateException("IStack.pop");
-		Object[] newElements = new Object[size-1];
-		System.arraycopy(elements, 0, newElements, 0, size-1);
+		LinkedList<E> newElements = new LinkedList<E>();
+		newElements.addAll(elements);
+		newElements.remove(size);//TODO make sure this is not off by one
 		return new IStack(newElements, size-1);
 	}
 
